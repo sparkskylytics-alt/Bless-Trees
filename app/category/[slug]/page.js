@@ -1,0 +1,2 @@
+import Link from 'next/link'
+export default function Category({params}){let name=params.slug.split('-').map(x=>x[0].toUpperCase()+x.slice(1)).join(' ');return <main className="form-page"><Link className="back" href="/">← Home / Categories</Link><p className="kicker">CATEGORY</p><h1>{name}</h1><p className="intro">Thoughtful laser-cut pieces designed to be personal, distinctive and made to last.</p><Link className="button" href="/products">Explore creations ↗</Link></main>}
