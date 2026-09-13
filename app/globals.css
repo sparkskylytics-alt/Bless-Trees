@@ -88,3 +88,138 @@ main{position:relative;background:radial-gradient(circle at 92% 10%,rgba(206,226
 #categories{background:#f7f1e8!important}#products{background:#edf2ee!important}.custom{background:#f5eee3!important}.why{background:#f0f0f5!important}.showcase{background:#f8f0ed!important}.process{background:#e8efdd!important}.contact-band{background:#eef2e7!important}footer{background:#f7f1e8!important}
 /* Replace generic room photography with the actual laser-art gallery collection. */
 #categories .cat-art img{content:url('/hero-gallery-v2.png')!important;object-fit:cover!important}#categories .category:nth-child(1) .cat-art img{object-position:73% 35%!important}#categories .category:nth-child(2) .cat-art img{content:url('/hero-laser-art.png')!important;object-position:85% 45%!important}#categories .category:nth-child(3) .cat-art img{object-position:55% 65%!important}#categories .category:nth-child(4) .cat-art img{content:url('/hero-laser-art.png')!important;object-position:68% 75%!important}.product-img img{content:url('/hero-gallery-v2.png')!important;object-fit:cover!important}.product:nth-child(1) .product-img img{object-position:78% 40%!important}.product:nth-child(2) .product-img img{content:url('/hero-laser-art.png')!important;object-position:80% 55%!important}.product:nth-child(3) .product-img img{object-position:54% 70%!important}.product:nth-child(4) .product-img img{content:url('/hero-laser-art.png')!important;object-position:63% 32%!important}
+
+/* Responsive gallery layout — declared last so narrow-screen rules win over the editorial desktop compositions. */
+html,body{max-width:100%;overflow-x:hidden}
+img,video{max-width:100%}
+@media(max-width:1080px){
+  header{padding-inline:24px!important}
+  nav{gap:16px!important;font-size:12px!important}
+  nav .button{padding:10px 12px!important}
+  .hero{padding-inline:clamp(24px,5vw,52px)!important}
+  #categories .category-grid,.product-grid{gap:18px!important}
+  #categories .cat-art{height:180px!important}
+  #categories .category h3{font-size:24px!important}
+  .show-copy{padding:50px 7%!important}
+}
+@media(max-width:840px){
+  header{height:64px!important;padding-inline:18px!important}
+  .brand{min-width:0!important;gap:8px!important}
+  .brand img{width:42px!important;height:42px!important}
+  .brand strong{font-size:17px!important}
+  .brand small{font-size:7px!important}
+  .menu{display:block!important;z-index:12;color:#171716!important}
+  nav{display:none!important;position:absolute!important;top:63px!important;left:0!important;right:0!important;z-index:11;padding:18px 22px 22px!important;gap:0!important;background:#faf8f2!important;border-bottom:1px solid var(--gallery-rule)!important;box-shadow:0 14px 24px rgba(23,23,22,.08)!important}
+  nav.visible{display:flex!important}
+  nav a{width:100%;padding:11px 0;border-bottom:1px solid #e7e2d7!important}
+  nav a:last-child{width:auto;margin-top:13px;border-bottom:0!important}
+  .hero{height:auto!important;min-height:520px!important;padding:52px 24px 46px!important;display:flex!important;align-items:flex-end!important;background:linear-gradient(90deg,rgba(250,248,242,.96) 0%,rgba(250,248,242,.82) 45%,rgba(250,248,242,.28) 100%),url('/hero-gallery-v2.png') 68% center/cover no-repeat!important}
+  .hero-copy{position:relative!important;left:auto!important;bottom:auto!important;width:100%;max-width:420px!important}
+  .hero h1,.hero h1 em{font-size:clamp(42px,8vw,58px)!important;line-height:.95!important}
+  .hero .lead{font-size:13px!important;max-width:330px!important}
+  .hero-art{display:none!important}
+  .section,.tint{padding:42px 24px!important}
+  .section-title{margin-bottom:24px!important;align-items:flex-end!important}
+  .section h2{font-size:clamp(36px,7vw,48px)!important}
+  #categories .category-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;overflow:visible!important;gap:14px!important;padding:0!important}
+  #categories .category{min-width:0!important;padding:10px!important}
+  #categories .cat-art{height:150px!important;margin-bottom:12px!important}
+  #categories .category h3{font-size:22px!important;line-height:1.02!important}
+  #categories .category>p:last-child{display:block!important;font-size:10px!important}
+  #products{padding-top:46px!important}
+  #products .product-grid,.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:14px!important}
+  #products .product:nth-child(1){grid-column:auto!important;grid-row:auto!important}
+  #products .product:nth-child(n){transform:none!important}
+  #products .product:nth-child(n) .product-img,.product-img{height:205px!important;margin-top:0!important}
+  .product-info{padding:12px 0 0!important}
+  .product h3{font-size:22px!important}
+  .custom{display:grid!important;grid-template-columns:1fr!important;gap:30px!important;margin:0!important;padding:46px 24px!important}
+  .custom-art{height:245px!important}
+  .why{display:grid!important;grid-template-columns:1fr 1fr!important;padding:42px 24px!important}
+  .why>div:first-child{grid-column:span 2!important}
+  .why .feature{min-height:0!important;padding:16px 12px!important}
+  .showcase{display:grid!important;grid-template-columns:1fr!important;gap:0!important;padding:0!important}
+  .show-img{height:290px!important}
+  .show-copy{padding:38px 24px!important}
+  .showcase h2{font-size:42px!important}
+  .process{padding:38px 24px!important}
+  .steps{grid-template-columns:1fr 1fr!important;gap:0!important}
+  .steps>div{padding:18px!important}
+  .contact-band{display:block!important;padding:42px 24px!important}
+  .contact-band h2{font-size:clamp(38px,8vw,52px)!important}
+  .contact-band .actions{margin-top:24px!important}
+  footer{grid-template-columns:1fr!important;padding:32px 24px!important}
+  footer>small{text-align:left!important}
+  .form-page{padding:38px 24px 60px!important}
+}
+@media(max-width:520px){
+  .hero{min-height:500px!important;padding:44px 20px 36px!important;background:linear-gradient(90deg,rgba(250,248,242,.97) 0%,rgba(250,248,242,.88) 60%,rgba(250,248,242,.43) 100%),url('/hero-gallery-v2.png') 64% center/cover no-repeat!important}
+  .hero .kicker{font-size:8px!important;letter-spacing:.16em!important;padding:7px 11px!important}
+  .hero h1,.hero h1 em{font-size:42px!important}
+  .hero .actions{gap:13px!important}
+  .hero .actions .button{padding:12px 14px!important}
+  .section,.tint{padding:36px 20px!important}
+  .section-title{display:block!important}
+  .section-title .text-link{display:inline-block!important;margin-top:15px}
+  .section h2{font-size:38px!important}
+  #categories .category-grid,#products .product-grid,.product-grid{grid-template-columns:1fr!important}
+  #categories .cat-art{height:190px!important}
+  #categories .category{padding:12px!important}
+  #categories .category h3{font-size:25px!important}
+  #products .product:nth-child(n) .product-img,.product-img{height:230px!important}
+  .product h3{font-size:25px!important}
+  .custom{padding:38px 20px!important}
+  .custom h2{font-size:42px!important}
+  .custom-art{height:220px!important}
+  .why{padding:36px 20px!important;grid-template-columns:1fr!important}
+  .why>div:first-child{grid-column:auto!important}
+  .why .feature{border-left:0!important;border-top:1px solid var(--gallery-rule)!important;padding:15px 0!important}
+  .show-img{height:235px!important}
+  .show-copy{padding:34px 20px!important}
+  .showcase h2{font-size:39px!important}
+  .steps{grid-template-columns:1fr!important}
+  .steps>div{border-left:0!important;border-top:1px solid var(--gallery-rule)!important;padding:17px 0!important}
+  .steps>div:first-child{border-top:0!important}
+  .contact-band{padding:36px 20px!important}
+  .contact-band .actions{align-items:flex-start!important;flex-direction:column!important}
+  .form-page{padding:30px 20px 50px!important}
+  .form-page h1{font-size:42px!important}
+  form{grid-template-columns:1fr!important;gap:14px!important}
+}
+
+/* Calm scroll choreography: artwork enters like a gallery reveal, not a template effect. */
+@media(prefers-reduced-motion:no-preference){
+  .motion-ready .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.22,1,.36,1) var(--reveal-delay,0ms),transform .7s cubic-bezier(.22,1,.36,1) var(--reveal-delay,0ms)}
+  .motion-ready .reveal.is-visible{opacity:1;transform:translateY(0)}
+  .motion-ready .reveal-item{opacity:0;transform:translateY(18px) scale(.985);transition:opacity .55s cubic-bezier(.22,1,.36,1) var(--item-delay,0ms),transform .65s cubic-bezier(.22,1,.36,1) var(--item-delay,0ms),box-shadow .35s ease}
+  .motion-ready .reveal-item.is-visible{opacity:1;transform:translateY(0) scale(1)}
+  .motion-ready .hero.is-visible .hero-copy .kicker{animation:softSlide .7s cubic-bezier(.22,1,.36,1) .08s both}
+  .motion-ready .hero.is-visible .hero-copy h1{animation:softSlide .8s cubic-bezier(.22,1,.36,1) .16s both}
+  .motion-ready .hero.is-visible .hero-copy .lead{animation:softSlide .8s cubic-bezier(.22,1,.36,1) .25s both}
+  .motion-ready .hero.is-visible .hero-copy .actions{animation:softSlide .8s cubic-bezier(.22,1,.36,1) .34s both}
+  .motion-ready .category.reveal-item.is-visible:hover,.motion-ready .product.reveal-item.is-visible:hover{transform:translateY(-6px)!important}
+  .category:hover .cat-art img,.product:hover .product-img img{transform:scale(1.045);transition:transform .75s cubic-bezier(.22,1,.36,1)}
+  .button{transition:transform .25s ease,background-color .25s ease,box-shadow .25s ease!important}
+  .button:hover{transform:translateY(-2px)!important;box-shadow:0 10px 20px rgba(20,25,20,.16)}
+  @keyframes softSlide{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+}
+
+/* A full studio footer gives the page a deliberate final chapter. */
+.site-footer{background:#16231f!important;color:#f7f3e9!important;padding:0 max(6vw,28px)!important;border:0!important;display:block!important}
+.footer-main{max-width:1280px;margin:auto;padding:62px 0 50px;display:grid;grid-template-columns:1.1fr 1.35fr .7fr;gap:7vw;align-items:start}
+.site-footer .brand{width:max-content;margin-bottom:24px}
+.site-footer .brand strong{font-size:27px!important;color:#f7f3e9!important}
+.site-footer .brand small{color:#bbc5b9!important;font-size:8px!important}
+.site-footer .brand img{width:58px!important;height:58px!important}
+.footer-brand>p{max-width:300px;margin:0;color:#bfc8bb!important;font:13px/1.7 'Manrope',Arial,sans-serif!important}
+.footer-label{margin:0 0 16px;color:#a9c969!important;font:600 9px/1 'Manrope',Arial,sans-serif!important;letter-spacing:.2em;text-transform:uppercase}
+.footer-cta{padding-left:7vw;border-left:1px solid rgba(236,242,225,.18)}
+.footer-cta h2{margin:0 0 24px;color:#f7f3e9!important;font:500 clamp(34px,3.3vw,48px)/.9 'Cormorant Garamond',Georgia,serif!important;letter-spacing:-.04em}
+.footer-cta h2 em{color:#b7d56c!important;font-style:italic!important}
+.footer-button{display:inline-flex;gap:22px;align-items:center;border-bottom:1px solid rgba(247,243,233,.6);padding-bottom:8px;font:600 11px 'Manrope',Arial,sans-serif!important;letter-spacing:.04em;transition:color .25s,border-color .25s}
+.footer-button span{font-size:17px;color:#b7d56c;transition:transform .25s}
+.footer-button:hover{color:#b7d56c;border-color:#b7d56c}.footer-button:hover span{transform:translate(3px,-3px)}
+.footer-nav{display:grid;gap:11px;align-content:start}.footer-nav a{width:max-content;color:#d6ded2!important;font:12px 'Manrope',Arial,sans-serif!important;transition:color .2s,transform .2s}.footer-nav a:hover{color:#b7d56c!important;transform:translateX(4px)}
+.footer-bottom{max-width:1280px;margin:auto;border-top:1px solid rgba(236,242,225,.16);padding:17px 0 20px;display:flex;justify-content:space-between;gap:20px}.footer-bottom small{color:#9eaa9e!important;font:9px 'Manrope',Arial,sans-serif!important;letter-spacing:.03em;text-align:left!important}
+@media(max-width:840px){.site-footer{padding-inline:24px!important}.footer-main{padding:46px 0 34px;grid-template-columns:1fr 1fr;gap:40px}.footer-brand{grid-column:span 2}.footer-cta{padding-left:0;border-left:0}.footer-bottom{padding:16px 0;flex-direction:column;gap:7px}}
+@media(max-width:520px){.site-footer{padding-inline:20px!important}.footer-main{padding:40px 0 30px;grid-template-columns:1fr;gap:34px}.footer-brand{grid-column:auto}.site-footer .brand strong{font-size:25px!important}.footer-cta h2{font-size:40px!important}.footer-bottom{padding:15px 0 18px}}
