@@ -71,13 +71,13 @@ main{position:relative;background:radial-gradient(circle at 92% 10%,rgba(206,226
 .hero-art>img{object-fit:contain!important;object-position:right center!important;transform:scale(.82) translateX(8%)!important}.hero:hover .hero-art>img{transform:scale(.86) translateX(8%)!important}@media(max-width:800px){.hero-art>img{object-fit:cover!important;transform:none!important}}
 
 /* Compact full-scene hero using the bespoke laser-art gallery background. */
-.hero{display:block!important;min-height:470px!important;height:470px!important;padding:72px max(6vw,28px)!important;background:linear-gradient(90deg,rgba(250,248,242,.97) 0%,rgba(250,248,242,.82) 35%,rgba(250,248,242,.08) 68%),url('/products/golden-temple-clean.jpg') center center/cover no-repeat!important;overflow:hidden}.hero:before{display:none!important}.hero-copy{max-width:465px!important;z-index:2}.hero h1{font-size:clamp(42px,3.8vw,58px)!important;line-height:.98!important}.hero .lead{font-size:14px!important;max-width:365px!important}.hero-note{display:none!important}.hero-art{display:none!important}@media(max-width:800px){.hero{height:510px!important;min-height:510px!important;padding:55px 24px!important;background:linear-gradient(90deg,rgba(250,248,242,.96),rgba(250,248,242,.45)),url('/products/golden-temple-clean.jpg') center center/cover no-repeat!important}.hero h1{font-size:42px!important}}
+.hero{display:block!important;min-height:470px!important;height:470px!important;padding:72px max(6vw,28px)!important;background:linear-gradient(90deg,rgba(250,248,242,.97) 0%,rgba(250,248,242,.82) 35%,rgba(250,248,242,.08) 68%),url('/golden-background.png') center center/cover no-repeat!important;overflow:hidden}.hero:before{display:none!important}.hero-copy{max-width:465px!important;z-index:2}.hero h1{font-size:clamp(42px,3.8vw,58px)!important;line-height:.98!important}.hero .lead{font-size:14px!important;max-width:365px!important}.hero-note{display:none!important}.hero-art{display:none!important}@media(max-width:800px){.hero{height:510px!important;min-height:510px!important;padding:55px 24px!important;background:linear-gradient(90deg,rgba(250,248,242,.96),rgba(250,248,242,.45)),url('/golden-background.png') center center/cover no-repeat!important}.hero h1{font-size:42px!important}}
 
 /* Manrope gives the gallery UI a warmer, quieter voice than Inter. */
 :root{--sans:'Manrope',Arial,sans-serif}body,nav,.button,.kicker,.eyebrow,.lead,.text-link,button,input,textarea,.product-info a,.category>p:last-child,.product-info>p:not(.eyebrow),.custom>div>p:not(.kicker),.show-copy>p:not(.kicker),.show-copy ul,.contact-band p:not(.kicker){font-family:'Manrope',Arial,sans-serif!important}.kicker,.eyebrow{font-weight:600!important;letter-spacing:.18em!important}.lead{font-weight:400!important}.button{font-weight:600!important;letter-spacing:.02em!important}
 
 /* One shared gallery background and section language across the whole page. */
-:root{--gallery-bg:#faf8f2;--gallery-rule:#ddd9ce}html,body,main,main>section,.section,.tint,.why,.showcase,.custom,.process,.contact-band,footer{background:var(--gallery-bg)!important;color:#171716!important}.hero{background:linear-gradient(90deg,rgba(250,248,242,.97) 0%,rgba(250,248,242,.82) 35%,rgba(250,248,242,.08) 68%),url('/products/golden-temple-clean.jpg') center center/cover no-repeat!important}.section,.tint,.why,.showcase,.custom,.process,.contact-band{border-radius:0!important;border-top:1px solid var(--gallery-rule)!important;border-bottom:0!important;box-shadow:none!important;margin:0!important;padding-top:58px!important;padding-bottom:58px!important}.custom:before,.custom:after,.contact-band:before,.contact-band:after{display:none!important}.custom h2,.custom h2 em,.contact-band h2,.contact-band h2 em{color:#171716!important}.custom .kicker,.contact-band .kicker{color:#4d4634!important}.custom>div>p:not(.kicker),.contact-band p:not(.kicker){color:#514e48!important}.custom .button,.contact-band .button{background:#171716!important;border-color:#171716!important;color:var(--gallery-bg)!important}.custom-art img{box-shadow:none!important;filter:saturate(.82)!important}.process{color:#171716!important}.process .kicker,.steps span{color:#4d4634!important}.steps>div{border-color:var(--gallery-rule)!important}.steps h3{color:#171716!important}.contact-band{display:flex!important}.contact-band .text-link{color:#171716!important;border-color:#171716!important}footer{border-top:1px solid var(--gallery-rule)!important}footer,footer .brand,footer>p,footer>small,footer .brand small{color:#171716!important}.footer-links a{color:#171716!important}@media(max-width:800px){.section,.tint,.why,.showcase,.custom,.process,.contact-band{padding-top:42px!important;padding-bottom:42px!important}.contact-band{display:block!important}}
+:root{--gallery-bg:#faf8f2;--gallery-rule:#ddd9ce}html,body,main,main>section,.section,.tint,.why,.showcase,.custom,.process,.contact-band,footer{background:var(--gallery-bg)!important;color:#171716!important}.hero{background:linear-gradient(90deg,rgba(250,248,242,.97) 0%,rgba(250,248,242,.82) 35%,rgba(250,248,242,.08) 68%),url('/golden-background.png') center center/cover no-repeat!important}.section,.tint,.why,.showcase,.custom,.process,.contact-band{border-radius:0!important;border-top:1px solid var(--gallery-rule)!important;border-bottom:0!important;box-shadow:none!important;margin:0!important;padding-top:58px!important;padding-bottom:58px!important}.custom:before,.custom:after,.contact-band:before,.contact-band:after{display:none!important}.custom h2,.custom h2 em,.contact-band h2,.contact-band h2 em{color:#171716!important}.custom .kicker,.contact-band .kicker{color:#4d4634!important}.custom>div>p:not(.kicker),.contact-band p:not(.kicker){color:#514e48!important}.custom .button,.contact-band .button{background:#171716!important;border-color:#171716!important;color:var(--gallery-bg)!important}.custom-art img{box-shadow:none!important;filter:saturate(.82)!important}.process{color:#171716!important}.process .kicker,.steps span{color:#4d4634!important}.steps>div{border-color:var(--gallery-rule)!important}.steps h3{color:#171716!important}.contact-band{display:flex!important}.contact-band .text-link{color:#171716!important;border-color:#171716!important}footer{border-top:1px solid var(--gallery-rule)!important}footer,footer .brand,footer>p,footer>small,footer .brand small{color:#171716!important}.footer-links a{color:#171716!important}@media(max-width:800px){.section,.tint,.why,.showcase,.custom,.process,.contact-band{padding-top:42px!important;padding-bottom:42px!important}.contact-band{display:block!important}}
 
 /* Connected but varied gallery chapters — each section gets its own composition. */
 #categories{padding-bottom:34px!important}#categories .category-grid{display:flex!important;gap:12px!important;overflow:hidden;padding-top:6px}#categories .category{flex:1;min-width:0;padding:10px!important;border:1px solid transparent!important;background:#f2eee4!important;transition:.35s}#categories .category:nth-child(2){background:#e9f0e0!important;transform:translateY(18px)}#categories .category:nth-child(3){background:#efe8ef!important;transform:translateY(5px)}#categories .category:nth-child(4){background:#f6ecd8!important;transform:translateY(28px)}#categories .cat-art{height:145px!important;margin:0 0 14px!important;border-radius:0!important}#categories .category h3{font-size:24px!important}#categories .category>p:last-child{display:none}#products{padding-top:85px!important}#products .product-grid{display:grid!important;grid-template-columns:1.35fr .8fr .8fr 1.1fr!important;align-items:end;gap:20px!important}#products .product:nth-child(1){grid-row:span 2}#products .product:nth-child(1) .product-img{height:420px!important}#products .product:nth-child(2){transform:translateY(45px)}#products .product:nth-child(2) .product-img{height:250px!important}#products .product:nth-child(3) .product-img{height:210px!important}#products .product:nth-child(4){transform:translateY(22px)}#products .product:nth-child(4) .product-img{height:310px!important}.custom{display:grid!important;grid-template-columns:.9fr 1.1fr!important;align-items:center;border-top:1px solid var(--gallery-rule)!important;padding-left:max(7vw,24px)!important;padding-right:max(7vw,24px)!important}.custom-art{height:330px!important}.custom-art img{object-position:center 22%!important}.why{display:grid!important;grid-template-columns:1.5fr repeat(4,1fr)!important;gap:0!important}.why .feature{min-height:130px;padding:22px!important;border-left:1px solid var(--gallery-rule)!important}.showcase{display:grid!important;grid-template-columns:1.25fr .75fr!important;gap:0!important;padding:0!important}.show-img{height:480px!important}.show-copy{padding:70px 10%!important;align-self:center}.process{padding-left:max(7vw,24px)!important;padding-right:max(7vw,24px)!important}.steps{display:grid!important;grid-template-columns:repeat(4,1fr)!important}.steps>div{padding:28px!important}.steps>div:nth-child(odd){background:#ede9df}.steps>div:nth-child(even){background:#e6eedb}.contact-band{align-items:center!important;justify-content:space-between!important;padding-left:max(7vw,24px)!important;padding-right:max(7vw,24px)!important}.contact-band h2{font-size:clamp(44px,5vw,72px)!important;max-width:700px}.contact-band:after{content:'→'!important;display:block!important;font:500 110px/1 'Cormorant Garamond',serif!important;color:#a9be69!important;margin-left:auto}@media(max-width:800px){#categories .category-grid{overflow-x:auto!important}#categories .category{min-width:180px}#products .product-grid{grid-template-columns:1fr 1fr!important}#products .product:nth-child(n){transform:none!important}#products .product:nth-child(1){grid-column:span 2}#products .product:nth-child(1) .product-img{height:310px!important}.custom,.showcase{grid-template-columns:1fr!important}.custom-art,.show-img{height:250px!important}.why{grid-template-columns:1fr 1fr!important}.why>div:first-child{grid-column:span 2}.steps{grid-template-columns:1fr 1fr!important}.contact-band:after{display:none!important}}
@@ -112,7 +112,7 @@ img,video{max-width:100%}
   nav.visible{display:flex!important}
   nav a{width:100%;padding:11px 0;border-bottom:1px solid #e7e2d7!important}
   nav a:last-child{width:auto;margin-top:13px;border-bottom:0!important}
-  .hero{height:auto!important;min-height:520px!important;padding:52px 24px 46px!important;display:flex!important;align-items:flex-end!important;background:linear-gradient(90deg,rgba(250,248,242,.96) 0%,rgba(250,248,242,.82) 45%,rgba(250,248,242,.28) 100%),url('/products/golden-temple-clean.jpg') center center/cover no-repeat!important}
+  .hero{height:auto!important;min-height:520px!important;padding:52px 24px 46px!important;display:flex!important;align-items:flex-end!important;background:linear-gradient(90deg,rgba(250,248,242,.96) 0%,rgba(250,248,242,.82) 45%,rgba(250,248,242,.28) 100%),url('/golden-background.png') center center/cover no-repeat!important}
   .hero-copy{position:relative!important;left:auto!important;bottom:auto!important;width:100%;max-width:420px!important}
   .hero h1,.hero h1 em{font-size:clamp(42px,8vw,58px)!important;line-height:.95!important}
   .hero .lead{font-size:13px!important;max-width:330px!important}
@@ -152,7 +152,7 @@ img,video{max-width:100%}
   .form-page{padding:38px 24px 60px!important}
 }
 @media(max-width:520px){
-  .hero{min-height:500px!important;padding:44px 20px 36px!important;background:linear-gradient(90deg,rgba(250,248,242,.97) 0%,rgba(250,248,242,.88) 60%,rgba(250,248,242,.43) 100%),url('/products/golden-temple-clean.jpg') center center/cover no-repeat!important}
+  .hero{min-height:500px!important;padding:44px 20px 36px!important;background:linear-gradient(90deg,rgba(250,248,242,.97) 0%,rgba(250,248,242,.88) 60%,rgba(250,248,242,.43) 100%),url('/golden-background.png') center center/cover no-repeat!important}
   .hero .kicker{font-size:8px!important;letter-spacing:.16em!important;padding:7px 11px!important}
   .hero h1,.hero h1 em{font-size:42px!important}
   .hero .actions{gap:13px!important}
@@ -385,3 +385,57 @@ img,video{max-width:100%}
 #products .product-arrow{display:flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:transparent!important;color:var(--blue)!important;font-size:15px;font-weight:400;transition:transform .3s ease}
 #products .product:hover .product-arrow{transform:translateX(3px)}
 @media(max-width:800px){#products .product-grid{grid-template-columns:repeat(2,1fr)!important;gap:10px!important}#products .product-img,#products .product:nth-child(n) .product-img{height:130px!important}#products .product-info{padding:11px!important}#products .product h3{font-size:15px!important}}
+
+/* Multi-page layout: shared wrapper, catalog filter, about, contact */
+.page-wrap{max-width:1180px;margin:0 auto;padding:48px max(5vw,24px) 72px}
+.page-wrap h1{font-size:clamp(36px,4.6vw,60px)!important;line-height:1.05;margin:0 0 14px}
+.page-wrap h1 em{color:#a9784c!important;font-style:italic}
+.page-wrap .intro{max-width:560px;color:#5c5850;margin:0 0 26px}
+.filter-bar{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 22px}
+.chip{padding:9px 16px;border:1px solid #e0d6c0;background:#fff;font:600 12px 'Manrope',Arial,sans-serif;color:#171716;transition:.2s}
+.chip:hover{border-color:#a9784c}
+.chip.on{background:#171716;color:#fff;border-color:#171716}
+.filter-note{margin:0 0 20px;color:#5c5850;font-size:14px}
+.catalog .product-grid{display:grid!important;grid-template-columns:repeat(4,1fr)!important;gap:16px!important}
+.catalog .product{background:#fffefb!important;border:0!important;border-radius:0!important;overflow:hidden;box-shadow:0 1px 0 rgba(20,20,18,.05)!important;transform:none!important;display:flex;flex-direction:column}
+.catalog .product-img{height:190px!important;margin:0!important}
+.catalog .product-img img{width:100%;height:100%;object-fit:cover}
+.catalog .product-info{padding:14px!important;flex:1;display:flex;flex-direction:column}
+.catalog .product-info .eyebrow{font-size:9px!important;color:#8a5a2b!important;margin:0 0 5px!important}
+.catalog .product h3{font-size:18px!important;font-weight:600!important;margin:0 0 5px!important}
+.catalog .product-info>p:not(.eyebrow){font-size:12px!important;color:#5c5850!important;margin:0 0 10px!important}
+.catalog .product-link{margin-top:auto;display:flex;align-items:center;gap:6px;font:600 12px 'Manrope',Arial,sans-serif;color:#171716}
+.catalog .product-link>span:first-child{border-bottom:1px solid #171716;padding-bottom:2px}
+.about-cols{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:start;margin:26px 0 40px}
+.about-cols p{color:#3a3a34;line-height:1.7;margin:0 0 16px;max-width:560px}
+.about-cta{display:flex;gap:20px;align-items:center;margin-top:22px}
+.about-people{display:flex;gap:16px}
+.about-people figure{margin:0;flex:1}
+.about-people img{width:100%;height:320px;object-fit:cover;object-position:top center;display:block}
+.about-people figcaption{padding-top:10px}
+.about-people strong{display:block;font-size:15px}
+.about-people small{color:#77776d;text-transform:uppercase;letter-spacing:.08em;font-size:10px}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--gallery-rule)}
+.timeline div{padding:22px 20px 0 0}
+.timeline span{font:600 26px 'Cormorant Garamond',serif;color:#a9784c}
+.timeline p{font-size:13px;color:#5c5850;margin:6px 0 0}
+.contact-cols{display:grid;grid-template-columns:1.3fr .7fr;gap:44px;align-items:start;margin-top:10px}
+.contact-page form{margin-top:20px}
+.contact-side{display:grid;gap:18px;position:sticky;top:96px}
+.contact-side small{display:block;font-size:9px;letter-spacing:.14em;color:#8a8a7d;margin-bottom:4px}
+.contact-side strong{font-size:14px;font-weight:600}
+.contact-side iframe{width:100%;height:220px;border:0}
+@media(max-width:840px){.catalog .product-grid{grid-template-columns:repeat(2,1fr)!important}.about-cols,.contact-cols{grid-template-columns:1fr}.timeline{grid-template-columns:1fr 1fr}.contact-side{position:static}.about-people img{height:240px}}
+@media(max-width:480px){.catalog .product-grid{grid-template-columns:1fr!important}}
+.catalog .product-grid .product:nth-child(n){margin:0!important;transform:none!important;grid-row:auto!important;grid-column:auto!important;align-self:stretch!important}
+.catalog .product-grid .product:nth-child(n) .product-img{height:220px!important;margin:0!important;aspect-ratio:auto!important}
+.catalog .product-grid .product:nth-child(n) .product-img img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important}
+@media(max-width:840px){.catalog .product-grid .product:nth-child(n) .product-img{height:170px!important}}
+
+/* Small brand logo in the corner of every product image */
+.product-img{position:relative!important}
+.product-img:after{content:'';position:absolute;top:10px;right:10px;width:26px;height:26px;border-radius:50%;background:url('/bless-tree-logo.jpeg') center/cover no-repeat;border:2px solid #fff;box-shadow:0 2px 8px rgba(20,20,18,.25);z-index:3;pointer-events:none}
+@media(max-width:800px){.product-img:after{width:20px;height:20px;top:8px;right:8px}}
+.product-img:after{right:auto!important;left:10px!important}
+#discover .best-seller{left:auto!important;right:10px!important}
+@media(max-width:800px){.product-img:after{left:8px!important;right:auto!important}#discover .best-seller{right:8px!important}}
