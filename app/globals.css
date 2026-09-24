@@ -278,8 +278,8 @@ img,video{max-width:100%}
 #categories .category:nth-child(2){--cat-bg:#eaf2df;--cat-accent:#6f9a3c;--cat-icon-bg:#d9e8c4}
 #categories .category:nth-child(3){--cat-bg:#f1e9f5;--cat-accent:#8a6bb0;--cat-icon-bg:#e2d3ec}
 #categories .category:nth-child(4){--cat-bg:#faecdb;--cat-accent:#c07a3e;--cat-icon-bg:#f3dcbb}
-#categories .cat-art{height:190px!important;margin:0!important;border-radius:0!important;background:radial-gradient(ellipse 78% 65% at 50% 62%,var(--cat-icon-bg) 0%,#fbf9f4 72%)!important;display:flex!important;align-items:center!important;justify-content:center!important;padding:6px!important;position:relative!important;overflow:hidden!important}
-#categories .cat-art img{width:auto!important;height:104%!important;max-width:100%!important;object-fit:contain!important;object-position:center!important;filter:drop-shadow(0 14px 16px rgba(30,24,14,.22))!important;transform:translateY(4%)!important}
+#categories .cat-art{height:190px!important;margin:0!important;border-radius:0!important;background:radial-gradient(ellipse 78% 65% at 50% 62%,var(--cat-icon-bg) 0%,#fbf9f4 72%)!important;display:block!important;padding:0!important;position:relative!important;overflow:hidden!important}
+#categories .cat-art img{width:100%!important;height:100%!important;max-width:none!important;object-fit:cover!important;object-position:center!important;filter:none!important}
 #categories .category-body{padding:16px 16px 4px!important;flex:1}
 #categories .category-head{display:flex!important;align-items:center!important;gap:10px!important;margin-bottom:8px!important}
 #categories .category-icon{display:inline-flex;flex:none;align-items:center;justify-content:center;width:34px;height:34px;border-radius:10px;background:var(--cat-icon-bg);color:var(--cat-accent)}
@@ -439,3 +439,74 @@ img,video{max-width:100%}
 .product-img:after{right:auto!important;left:10px!important}
 #discover .best-seller{left:auto!important;right:10px!important}
 @media(max-width:800px){.product-img:after{left:8px!important;right:auto!important}#discover .best-seller{right:8px!important}}
+
+/* Catalog: mobile polish */
+@media(max-width:840px){
+  .page-wrap{padding:28px 18px 48px}
+  .page-wrap h1{font-size:clamp(32px,9vw,44px)!important}
+  .filter-bar{flex-wrap:nowrap;overflow-x:auto;gap:8px;margin:0 -18px 16px;padding:0 18px 6px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .filter-bar::-webkit-scrollbar{display:none}
+  .chip{flex:none;padding:8px 13px;font-size:11.5px;white-space:nowrap}
+}
+@media(max-width:840px){
+  .catalog .product-grid{grid-template-columns:repeat(2,1fr)!important;gap:10px!important}
+  .catalog .product-grid .product:nth-child(n) .product-img{height:150px!important}
+  .catalog .product-info{padding:10px!important}
+  .catalog .product h3{font-size:15px!important}
+  .catalog .product-info>p:not(.eyebrow){display:block!important;font-size:11px!important;line-height:1.4;margin:0 0 8px!important}
+  .catalog .product-info .eyebrow{font-size:8px!important;letter-spacing:.06em!important}
+  .catalog .product-link{font-size:10.5px}
+}
+@media(max-width:480px){
+  .catalog .product-grid{grid-template-columns:repeat(2,1fr)!important}
+  .catalog .product-grid .product:nth-child(n) .product-img{height:130px!important}
+}
+
+/* Category images: whole photo visible (no crop) in equal boxes, blurred copy fills the spare space */
+#categories .cat-art img.cat-bg{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;filter:blur(16px) saturate(1.1)!important;transform:scale(1.2)!important;opacity:.5!important}
+#categories .cat-art img.cat-photo{position:relative!important;z-index:1!important;width:100%!important;height:100%!important;padding:10px!important;object-fit:contain!important;filter:drop-shadow(0 10px 14px rgba(30,24,14,.2))!important}
+#categories .cat-art img.cat-logo{z-index:2!important}
+
+/* Product images: whole photo visible (no crop), blurred copy fills the spare space */
+:is(#products,#discover,main) .product .product-img{background:#f3efe6!important}
+:is(#products,#discover,main) .product .product-img img.prod-bg{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;filter:blur(16px) saturate(1.1)!important;transform:scale(1.2)!important;opacity:.5!important}
+:is(#products,#discover,main) .product .product-img img.prod-photo{position:relative!important;z-index:1!important;width:100%!important;height:100%!important;object-fit:contain!important;object-position:center!important;filter:none!important}
+
+/* Showcase image: full photo (no crop) over a blurred copy of itself */
+.showcase .show-img{position:relative!important;overflow:hidden!important}
+.showcase .show-img img.show-bg{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;filter:blur(22px) brightness(.9) saturate(1.15)!important;transform:scale(1.2)!important;opacity:.85!important;box-shadow:none!important;border-radius:0!important}
+.showcase .show-img img.show-photo{position:relative!important;z-index:1!important;width:100%!important;height:100%!important;padding:18px!important;object-fit:contain!important;object-position:center!important;box-shadow:none!important;transform:none!important;filter:drop-shadow(0 18px 28px rgba(20,14,6,.35))!important}
+#discover .discover-more{display:flex;justify-content:center;margin-top:40px}
+/* Let grid cards shrink to their column so wide images can't push the grid off-screen */
+.product-grid>.product,.category-grid>.category{min-width:0!important}
+.product-img,.cat-art{max-width:100%!important;overflow:hidden!important}
+/* Contact details: phone/email lists and footer contact column */
+.contact-links{display:grid;gap:3px}.contact-links a{color:inherit;text-decoration:none;width:max-content;max-width:100%;overflow-wrap:anywhere}.contact-links a:hover{text-decoration:underline}
+@media(min-width:1001px){.footer-main{grid-template-columns:1fr 1.5fr .6fr 1fr!important;gap:3.5vw!important}.footer-cta{padding-left:3.5vw!important}}
+.footer-contact{display:grid;gap:11px;align-content:start;color:#d6ded2;font:12px/1.6 'Manrope',Arial,sans-serif}.footer-contact>p:not(.footer-label){margin:0}.footer-contact .contact-links{gap:6px}.footer-contact a:hover{color:#b7d56c}
+@media(max-width:1000px){.footer-main{grid-template-columns:1fr 1fr!important}}
+@media(max-width:560px){.footer-main{grid-template-columns:1fr!important}}
+/* WhatsApp enquiry form */
+.wa-note{grid-column:1/-1;display:block;margin-top:2px;color:#8a8a7d;font-size:11px}
+/* Footer: plain CTA text and social icons */
+.footer-cta-text{margin:0 0 22px;max-width:320px;color:#f7f3e9;font:500 17px/1.5 'Manrope',Arial,sans-serif}
+.footer-social{display:flex;gap:10px;margin-top:6px}
+.footer-social a{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;border:1px solid rgba(236,242,225,.25);color:#d6ded2;transition:.25s}
+.footer-social a:hover{background:#b7d56c;border-color:#b7d56c;color:#1a2420}
+.footer-social svg{width:15px;height:15px}
+/* Custom design pop-up (header button) */
+button.button.small{cursor:pointer;border:0;font:inherit}
+.form-modal{width:min(520px,calc(100vw - 32px));max-height:calc(100dvh - 32px);padding:0;border:0;border-radius:14px;background:#fffdf8;color:#171716;box-shadow:0 30px 80px -20px rgba(20,16,8,.45)}
+.form-modal::backdrop{background:rgba(20,20,18,.55);backdrop-filter:blur(3px)}
+.form-modal-box{position:relative;padding:30px 28px 24px}
+.form-modal-close{position:absolute;top:12px;right:14px;width:34px;height:34px;border:0;border-radius:50%;background:#f1ece1;color:#171716;font-size:22px;line-height:1;cursor:pointer}
+.form-modal-close:hover{background:#171716;color:#fff}
+.form-modal h2{margin:6px 0 6px;font:500 30px/1.1 'Cormorant Garamond',Georgia,serif}
+.form-modal-intro{margin:0 0 18px;color:#5c5850;font-size:13px}
+.form-modal form{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:0;padding:0;background:none;border:0;box-shadow:none;max-width:none}
+.form-modal form label{display:grid;gap:6px;font-size:12px;font-weight:600;color:#171716}
+.form-modal form label.full,.form-modal form .button,.form-modal form .wa-note{grid-column:1/-1}
+.form-modal form input,.form-modal form textarea{width:100%;padding:11px 12px;border:1px solid #ddd6c6;border-radius:8px;background:#fff;font:14px 'Manrope',Arial,sans-serif;color:#171716}
+.form-modal form textarea{min-height:96px;resize:vertical}
+.form-modal form .button{justify-content:center;width:100%;border:0;cursor:pointer}
+@media(max-width:520px){.form-modal-box{padding:26px 18px 20px}.form-modal form{grid-template-columns:1fr}}
