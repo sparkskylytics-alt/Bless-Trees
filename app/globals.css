@@ -89,7 +89,7 @@ main{position:relative;background:radial-gradient(circle at 92% 10%,rgba(206,226
 #categories .cat-art img{object-fit:cover!important;object-position:center 18%!important}#categories .category:nth-child(1) .cat-art img{object-position:center 42%!important}#categories .category:nth-child(2) .cat-art img{object-position:center 35%!important}#categories .category:nth-child(3) .cat-art img{object-position:center 30%!important}#categories .category:nth-child(4) .cat-art img{object-position:center 35%!important}.product-img img{object-fit:cover!important;object-position:center 14%!important}
 
 /* Responsive gallery layout — declared last so narrow-screen rules win over the editorial desktop compositions. */
-html,body{max-width:100%;overflow-x:hidden}
+html,body{max-width:100%;overflow-x:clip}
 img,video{max-width:100%}
 @media(max-width:1080px){
   header{padding-inline:24px!important}
