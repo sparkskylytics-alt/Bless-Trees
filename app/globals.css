@@ -428,9 +428,9 @@ img,video{max-width:100%}
 @media(max-width:840px){.catalog .product-grid{grid-template-columns:repeat(2,1fr)!important}.about-cols,.contact-cols{grid-template-columns:1fr}.timeline{grid-template-columns:1fr 1fr}.contact-side{position:static}.about-people img{height:240px}}
 @media(max-width:480px){.catalog .product-grid{grid-template-columns:1fr!important}}
 .catalog .product-grid .product:nth-child(n){margin:0!important;transform:none!important;grid-row:auto!important;grid-column:auto!important;align-self:stretch!important}
-.catalog .product-grid .product:nth-child(n) .product-img{height:220px!important;margin:0!important;aspect-ratio:auto!important}
-.catalog .product-grid .product:nth-child(n) .product-img img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important}
-@media(max-width:840px){.catalog .product-grid .product:nth-child(n) .product-img{height:170px!important}}
+.catalog .product-grid .product:nth-child(n) .product-img{width:100%!important;height:240px!important;margin:0!important;aspect-ratio:4 / 3!important;background:#f7f4ed!important}
+.catalog .product-grid .product:nth-child(n) .product-img img{width:100%!important;height:100%!important;object-fit:contain!important;object-position:center!important}
+@media(max-width:840px){.catalog .product-grid .product:nth-child(n) .product-img{height:190px!important}}
 
 /* Small brand logo in the corner of every product image */
 .product-img{position:relative!important}
