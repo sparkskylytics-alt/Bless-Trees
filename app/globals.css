@@ -510,3 +510,61 @@ button.button.small{cursor:pointer;border:0;font:inherit}
 .form-modal form textarea{min-height:96px;resize:vertical}
 .form-modal form .button{justify-content:center;width:100%;border:0;cursor:pointer}
 @media(max-width:520px){.form-modal-box{padding:26px 18px 20px}.form-modal form{grid-template-columns:1fr}}
+/* Hero slideshow: image layers replace the single hero background */
+.hero.has-slides{position:relative!important;overflow:hidden!important;background:#f8f7f2!important}
+.hero.has-slides:before{z-index:1}
+.hero-slides{position:absolute;inset:0;z-index:0}
+.hero-slide{position:absolute;inset:0;background:linear-gradient(90deg,rgba(250,248,242,.97) 0%,rgba(250,248,242,.82) 35%,rgba(250,248,242,.08) 68%),var(--slide) center right/cover no-repeat;opacity:0;transform:scale(1.04);transition:opacity 1.1s ease,transform 6s ease}
+.hero-slide.prev{opacity:1;z-index:1;transition:none}
+.hero-slide.on{opacity:1;transform:scale(1);z-index:2}
+.hero.has-slides .hero-copy{position:relative;z-index:2}
+.hero-controls{position:absolute;z-index:3;right:max(4vw,24px);bottom:26px;display:flex;align-items:center;gap:12px}
+.hero-arrow{width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.7);background:rgba(20,20,18,.35);backdrop-filter:blur(6px);color:#fff;font-size:16px;cursor:pointer;transition:.25s}
+.hero-arrow:hover{background:#171716;border-color:#171716}
+.hero-dots{display:flex;gap:7px}
+.hero-dots button{width:9px;height:9px;padding:0;border-radius:999px;border:0;background:rgba(255,255,255,.65);box-shadow:0 0 0 1px rgba(20,20,18,.25);cursor:pointer;transition:width .3s,background .3s}
+.hero-dots button.on{width:26px;background:#fff}
+@media(max-width:800px){.hero-slide{background:linear-gradient(90deg,rgba(250,248,242,.96),rgba(250,248,242,.5)),var(--slide) 70% center/cover no-repeat}.hero-controls{bottom:16px;right:16px}.hero-arrow{display:none}}
+@media(prefers-reduced-motion:reduce){.hero-slide{transition:opacity .2s;transform:none!important}}
+/* 'fit' hero slide: whole photo at full height on the right, left edge feathered into a blurred copy */
+.hero-slide.fit{background:none;isolation:isolate;overflow:hidden}
+.hero-slide.fit:before{content:'';position:absolute;inset:-40px;z-index:-1;background:var(--slide) center/cover no-repeat;filter:blur(28px) saturate(1.05)}
+.hero-slide.fit>img{position:absolute;top:0;right:0;height:100%;width:auto;max-width:none;z-index:0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 28%);mask-image:linear-gradient(90deg,transparent,#000 28%)}
+.hero-slide.fit:after{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(250,248,242,.97) 0%,rgba(250,248,242,.82) 35%,rgba(250,248,242,.08) 68%)}
+@media(max-width:800px){.hero-slide.fit>img{width:100%;height:100%;object-fit:cover;object-position:64% center;-webkit-mask-image:none;mask-image:none}.hero-slide.fit:after{background:linear-gradient(90deg,rgba(250,248,242,.96),rgba(250,248,242,.5))}}
+/* Categories: horizontal scroll row (4 visible on desktop) with arrow buttons */
+#categories .category:nth-child(5){--cat-bg:#e8eef8;--cat-accent:#2d5aa8;--cat-icon-bg:#d3dff2}
+#categories .category-grid{display:grid!important;grid-auto-flow:column!important;grid-template-columns:none!important;grid-auto-columns:calc((100% - 48px)/4)!important;gap:16px!important;overflow-x:auto!important;overflow-y:hidden!important;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:10px 2px 14px!important;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+#categories .category-grid::-webkit-scrollbar{display:none}
+#categories .category{scroll-snap-align:start}
+@media(max-width:1000px){#categories .category-grid{grid-auto-columns:calc((100% - 32px)/3)!important}}
+@media(max-width:800px){#categories .category-grid{grid-auto-columns:calc((100% - 10px)/2.2)!important;gap:10px!important}}
+@media(max-width:480px){#categories .category-grid{grid-auto-columns:78%!important}}
+/* Category row edge arrows + fade hinting at more cards */
+.cat-scroller{position:relative}
+.cat-side{position:absolute;top:50%;z-index:3;width:46px;height:46px;margin-top:-23px;border-radius:50%;border:0;background:#171716;color:#fff;font-size:18px;cursor:pointer;box-shadow:0 10px 24px -8px rgba(20,20,18,.5);opacity:0;visibility:hidden;transition:opacity .25s,transform .25s,visibility .25s}
+.cat-side.prev{left:-18px}.cat-side.next{right:-18px}
+.cat-scroller.can-left .cat-side.prev,.cat-scroller.can-right .cat-side.next{opacity:1;visibility:visible}
+.cat-side:hover{transform:scale(1.08);background:#a9784c}
+@media(max-width:800px){.cat-side{width:38px;height:38px;margin-top:-19px;font-size:15px}.cat-side.prev{left:-6px}.cat-side.next{right:-6px}}
+/* Team photos: founder + team with name and role captions */
+#about .about-photo .avatar{height:300px!important}
+#about .about-name{display:block;margin-top:10px;font:600 14px 'Manrope',Arial,sans-serif;color:#171716}
+#about .about-role{display:block;margin-top:2px;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#77776d}
+.about-people img{height:280px}
+/* Team photos: 4:5 portrait frame matches the photos, so faces aren't cropped */
+#about .about-photo .avatar{height:auto!important;aspect-ratio:4/5;object-fit:cover;object-position:center top!important}
+.about-people img{height:auto!important;aspect-ratio:4/5;object-position:center top}
+@media(max-width:800px){#about .about-photo .avatar{height:auto!important}}
+/* Team photos on phones: all three side by side in one compact row */
+@media(max-width:800px){
+  #about .about-photos{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:10px!important;flex-direction:unset!important}
+  #about .about-photo{flex:none!important;min-width:0}
+  #about .about-name{margin-top:8px;font-size:12px;line-height:1.3}
+  #about .about-role{font-size:9px;letter-spacing:.06em}
+}
+/* Products filter on phones: wrap chips onto rows instead of a hidden sideways strip */
+@media(max-width:800px){
+  .filter-bar{flex-wrap:wrap!important;overflow:visible!important;margin:0 0 18px!important;padding:0!important;gap:8px!important}
+  .filter-bar .chip{padding:8px 12px!important;font-size:12px!important;white-space:nowrap}
+}

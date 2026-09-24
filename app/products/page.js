@@ -13,7 +13,7 @@ export default async function Products({searchParams}){
     <main className="page-wrap catalog">
       <p className="kicker">OUR CATALOGUE</p>
       <h1>Our <em>creations.</em></h1>
-      <p className="intro">Browse handcrafted temple replicas, wall art, cutouts and wooden puzzles made to order.</p>
+      <p className="intro">Browse handcrafted temple replicas, awards and honours, wall art, cutouts and wooden puzzles made to order.</p>
       <div className="filter-bar">
         <Link className={!active?'chip on':'chip'} href="/products">All ({products.length})</Link>
         {categories.map(c=><Link key={c[0]} className={active&&active[0]===c[0]?'chip on':'chip'} href={'/products?category='+slugify(c[0])}>{c[0]} ({products.filter(p=>p[1]===c[0]).length})</Link>)}
