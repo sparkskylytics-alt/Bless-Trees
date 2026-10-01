@@ -4,7 +4,7 @@ import {SiteHeader,SiteFooter} from '../site-chrome'
 export const metadata={title:'About | Bless Tree'}
 
 const facts=[['2010','Archies Gift Gallery opens as a retail gift counter'],['2019','Manufacturing unit starts, offering customized gift articles'],['2020','Four laser machines running in the unit'],['Today','Laser cutting, UV printing and MV marking under one roof']]
-const team=[['Mrs. Mitashi Jain','Proprietor','/mitashi-jain.jpg'],['Prerak Jain','Marketing Head','/prerak-jain.jpg']]
+const team=[['Mr. Ajay Kumar Jain','Founder','/ajay-kumar-jain.jpg'],['Mrs. Mitashi Jain','Proprietor','/mitashi-jain.jpg'],['Mr. Prerak Jain','Marketing Head','/prerak-jain.jpg']]
 
 export default function About(){
   return <>
