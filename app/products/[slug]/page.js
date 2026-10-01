@@ -1,6 +1,12 @@
 import {SiteHeader,SiteFooter} from '../../site-chrome'
 import Link from 'next/link'
 import {products,slugify} from '../../products-data'
+export async function generateMetadata({params}){
+  const {slug}=await params
+  const product=products.find(p=>slugify(p[0])===slug)
+  if(!product) return {title:'Product'}
+  return {title:product[0],description:product[2]+' Custom laser cut work by Sheetal Laser Art Gallery, Muzaffarnagar.',keywords:[product[0],product[1],'laser cut','Sheetal Laser Art Gallery','Bless Tree'],alternates:{canonical:'/products/'+slug},openGraph:{title:product[0],description:product[2],images:[encodeURI(product[3])]}}
+}
 export default async function Detail({params}){
   const {slug}=await params
   const product=products.find(p=>slugify(p[0])===slug)

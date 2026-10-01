@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://bless-trees.vercel.app/sitemap.xml

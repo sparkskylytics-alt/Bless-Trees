@@ -1,6 +1,12 @@
 import {SiteHeader,SiteFooter} from '../../site-chrome'
 import Link from 'next/link'
 import {categories,products,slugify} from '../../products-data'
+export async function generateMetadata({params}){
+  const {slug}=await params
+  const cat=categories.find(c=>slugify(c[0])===slug)
+  if(!cat) return {title:'Category'}
+  return {title:cat[0],description:cat[1]+' Made to order by Sheetal Laser Art Gallery, Muzaffarnagar.',alternates:{canonical:'/category/'+slug},openGraph:{title:cat[0],description:cat[1],images:[encodeURI(cat[3])]}}
+}
 export default async function Category({params}){
   const {slug}=await params
   const cat=categories.find(c=>slugify(c[0])===slug)

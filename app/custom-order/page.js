@@ -1,3 +1,4 @@
 import {SiteHeader,SiteFooter} from '../site-chrome'
 import WhatsAppForm from '../whatsapp-form'
+export const metadata={title:'Custom Orders – Personalised Laser Cut Designs',description:'Share your idea and get a custom laser cut design made — personalised awards, name plates, wall art, gifts and replicas by Sheetal Laser Art Gallery.',alternates:{canonical:'/custom-order'}}
 export default function Custom(){return <><SiteHeader active=""/><main className="form-page"><a href="/" className="back">← Back to Bless Tree</a><p className="kicker">CUSTOM ORDERS</p><h1>Turn your idea into <em>laser art.</em></h1><p className="intro">Tell us what you have in mind. We’ll discuss the details and help shape it into something personal.</p><WhatsAppForm topic="Custom order request" placeholder="Describe your idea — product type, size, names, occasion…" button="Send request on WhatsApp"/></main><SiteFooter/></>}

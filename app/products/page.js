@@ -2,7 +2,7 @@ import Link from 'next/link'
 import {categories,products,slugify} from '../products-data'
 import {SiteHeader,SiteFooter} from '../site-chrome'
 
-export const metadata={title:'Products | Bless Tree'}
+export const metadata={title:'Products – Laser Cut Art, Temple Replicas & Awards',description:'Browse laser cut temple replicas, custom awards and honour plaques, wooden wall art, cutouts and wooden puzzles from Sheetal Laser Art Gallery, Muzaffarnagar.',alternates:{canonical:'/products'}}
 
 export default async function Products({searchParams}){
   const {category}=await searchParams
