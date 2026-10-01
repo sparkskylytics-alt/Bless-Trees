@@ -1,0 +1,7 @@
+# Bless Trees
+
+> Plant Trees & Buy Sustainable Products
+
+## Pages
+- Home: https://bless-trees.vercel.app/
+- Products: https://bless-trees.vercel.app/products
